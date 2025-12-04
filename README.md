@@ -1,116 +1,131 @@
-<<<<<<< HEAD
-# Gerador de Dados Falsos para Loja de Eletrônicos
+# Fake Data Generator Project
 
-Este projeto é um gerador simples de dados falsos para vendas em uma loja de eletrônicos, utilizando a biblioteca Faker para criar informações simuladas realistas.
+Este projeto é um gerador simples de dados falsos utilizando a biblioteca **Faker** para criar informações simuladas realistas.
 
-## Descrição
+---
 
-O script `geradorfake.py` gera um arquivo JSON contendo 6000 registros de vendas fictícias para uma loja chamada "Loja de Eletrônicos XYZ". Cada registro inclui informações como nome da loja, endereço, bairro, cidade, produto vendido, valor da venda e um ID único.
-=======
-# Gerador de Dados Falsos para Academia
+## 🛍️ Electronics Store Data Generator
 
-Este projeto é um gerador simples de dados falsos para uma academia de ginástica, utilizando a biblioteca Faker para criar informações simuladas realistas.
+### Descrição
 
-## Descrição
+O script `geradorfake.py` gera um arquivo JSON contendo **6000 registros fictícios de vendas** para uma loja chamada **"Loja de Eletrônicos XYZ"**.
 
-O script `geradorfake.py` gera um arquivo JSON contendo 6000 registros de dados fictícios para uma academia chamada "Superação Fitness". Cada registro inclui informações como nome da academia, endereço, bairro, cidade e um ID único.
->>>>>>> af731027a954ce02093bb96f1e637295cee5dd5d
+Cada registro inclui:
 
-## Requisitos
+* Nome da loja
+* Endereço
+* Bairro
+* Cidade
+* Produto vendido
+* Valor da venda
+* ID único
 
-- Python 3.6 ou superior
-- Biblioteca Faker
+---
 
-## Instalação
+## 💪 Gym Data Generator
 
-1. Clone este repositório:
-   ```
-   git clone https://github.com/DMaia-afk/Gerador_dados.git
-   cd Gerador_dados
-   ```
+### Descrição
 
-2. Instale as dependências:
-   ```
-   pip install faker
-   ```
+O script `geradorfake.py` também pode gerar um arquivo JSON contendo **6000 registros fictícios** para uma academia chamada **"Superação Fitness"**.
 
-## Uso
+Cada registro inclui:
+
+* Nome da academia
+* Endereço
+* Bairro
+* Cidade
+* ID único
+
+---
+
+## 🛠️ Requisitos Comuns
+
+* Python **3.6 ou superior**
+* Biblioteca **Faker**
+
+---
+
+## 📦 Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/DMaia-afk/Gerador_dados.git
+cd Gerador_dados
+```
+
+Instale as dependências:
+
+```bash
+pip install faker
+```
+
+---
+
+## ▶️ Uso
 
 Execute o script Python:
-```
+
+```bash
 python geradorfake.py
 ```
 
-<<<<<<< HEAD
-Isso irá gerar um arquivo chamado `dados_vendas_6000_registros.json` no diretório atual, contendo os dados simulados.
-=======
-Isso irá gerar um arquivo chamado `dados_academia_6000_registros.json` no diretório atual, contendo os dados simulados.
->>>>>>> af731027a954ce02093bb96f1e637295cee5dd5d
+### Saída
 
-## Estrutura dos Dados
+* **Loja de Eletrônicos:** gera `dados_vendas_6000_registros.json`
+* **Academia:** gera `dados_academia_6000_registros.json`
 
-Cada registro no JSON é um objeto com as seguintes chaves:
-<<<<<<< HEAD
-- `loja`: Nome da loja (fixo como "Loja de Eletrônicos XYZ")
-- `endereco`: Endereço fictício da loja
-- `bairro`: Bairro fictício
-- `cidade`: Cidade fictícia
-- `produto`: Produto vendido (sorteado de uma lista de 5 itens: Smartphone, Notebook, Tablet, Smart TV, Fone de Ouvido)
-- `valor`: Valor da venda em reais (número aleatório entre 100 e 5000)
-=======
-- `nome`: Nome da academia (fixo como "Superação Fitness")
-- `endereco`: Endereço fictício
-- `bairro`: Bairro fictício
-- `cidade`: Cidade fictícia
->>>>>>> af731027a954ce02093bb96f1e637295cee5dd5d
-- `id_registro`: ID único do registro (de 1 a 6000)
+---
 
-## Exemplo de Saída
+## 📊 Estrutura dos Dados
+
+| Chave       | Loja (Vendas)                                     | Academia (Geral)    |
+| ----------- | ------------------------------------------------- | ------------------- |
+| nome/loja   | "Loja de Eletrônicos XYZ"                         | "Superação Fitness" |
+| endereco    | Endereço fictício                                 | Endereço fictício   |
+| bairro      | Bairro fictício                                   | Bairro fictício     |
+| cidade      | Cidade fictícia                                   | Cidade fictícia     |
+| produto     | Smartphone, Notebook, Tablet, Smart TV, Headphone | N/A                 |
+| valor       | Número entre 100 e 5000                           | N/A                 |
+| id_registro | 1 a 6000                                          | 1 a 6000            |
+
+---
+
+## 📁 Exemplo de Saída JSON
 
 ```json
 [
   {
-<<<<<<< HEAD
-    "loja": "Loja de Eletrônicos XYZ",
-    "endereco": "Rua das Flores, 123",
-    "bairro": "Centro",
-    "cidade": "São Paulo",
-    "produto": "Smartphone",
-    "valor": 1500,
-=======
     "nome": "Superação Fitness",
     "endereco": "Rua das Flores, 123",
     "bairro": "Centro",
     "cidade": "São Paulo",
->>>>>>> af731027a954ce02093bb96f1e637295cee5dd5d
     "id_registro": 1
-  },
-  ...
+  }
 ]
 ```
 
-## Personalização
+---
+
+## 🔧 Personalização
 
 Você pode modificar o script para alterar:
-- O número de registros: mude a variável `NUM_REGISTROS`
-<<<<<<< HEAD
-- O nome da loja: mude `NOME_LOJA`
-- A lista de produtos: mude `ITENS_VENDAS`
-- O range de valores: mude os parâmetros `min` e `max` em `fake.random_int(min=100, max=5000)`
-=======
-- O nome da academia: mude `NOME_ACADEMIA`
->>>>>>> af731027a954ce02093bb96f1e637295cee5dd5d
-- A semente para reprodutibilidade: mude `Faker.seed(42)`
-- O locale: mude `fake = Faker('pt_BR')` para outro locale suportado pelo Faker
 
-## Licença
+* **Quantidade de registros**: altere `NUM_REGISTROS`
+* **Nome da loja/academia**: altere `NOME_LOJA` / `NOME_ACADEMIA`
+* **Lista de produtos**: altere `ITENS_VENDAS`
+* **Faixa de valores**: altere `fake.random_int(min=100, max=5000)`
+* **Seed**: altere `Faker.seed(42)`
+* **Idioma**: altere `fake = Faker('pt_BR')`
 
-Este projeto é de código aberto. Sinta-se à vontade para usar e modificar conforme necessário.
+---
 
-## Autor
+## 📄 Licença
 
-<<<<<<< HEAD
-DMaia-afk
-=======
-DMaia-afk
->>>>>>> af731027a954ce02093bb96f1e637295cee5dd5d
+Projeto open-source. Use e modifique como desejar.
+
+---
+
+## ✍️ Autor
+
+**DMaia-afk**
