@@ -1,60 +1,60 @@
 # Fake Data Generator Project
 
-Este projeto é um gerador simples de dados falsos utilizando a biblioteca **Faker** para criar informações simuladas realistas.
+This project is a simple fake data generator using the Faker library to create realistic simulated information.
 
 ---
 
-## 🛍️ Electronics Store Data Generator
+## Electronics Store Data Generator
 
-### Descrição
+### Description
 
-O script `geradorfake.py` gera um arquivo JSON contendo **6000 registros fictícios de vendas** para uma loja chamada **"Loja de Eletrônicos XYZ"**.
+The `geradorfake.py` script generates a JSON file containing **6000 fictitious sales records** for a store named **"Loja de Eletrônicos XYZ"**.
 
-Cada registro inclui:
+Each record includes:
 
-* Nome da loja
-* Endereço
-* Bairro
-* Cidade
-* Produto vendido
-* Valor da venda
-* ID único
-
----
-
-## 💪 Gym Data Generator
-
-### Descrição
-
-O script `geradorfake.py` também pode gerar um arquivo JSON contendo **6000 registros fictícios** para uma academia chamada **"Superação Fitness"**.
-
-Cada registro inclui:
-
-* Nome da academia
-* Endereço
-* Bairro
-* Cidade
-* ID único
+* Store name
+* Address
+* Neighborhood
+* City
+* Product sold
+* Sale value
+* Unique ID
 
 ---
 
-## 🛠️ Requisitos Comuns
+## Gym Data Generator
 
-* Python **3.6 ou superior**
-* Biblioteca **Faker**
+### Description
+
+The `geradorfake.py` script can also generate a JSON file containing **6000 fictitious records** for a gym named **"Superação Fitness"**.
+
+Each record includes:
+
+* Gym name
+* Address
+* Neighborhood
+* City
+* Unique ID
 
 ---
 
-## 📦 Instalação
+## Requirements
 
-Clone o repositório:
+* Python **3.6 or higher**
+* **Faker** library
+
+---
+
+## Installation
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/DMaia-afk/Gerador_dados.git
 cd Gerador_dados
 ```
 
-Instale as dependências:
+Install dependencies:
 
 ```bash
 pip install faker
@@ -62,70 +62,70 @@ pip install faker
 
 ---
 
-## ▶️ Uso
+## Usage
 
-Execute o script Python:
+Run the Python script:
 
 ```bash
 python geradorfake.py
 ```
 
-### Saída
+### Output
 
-* **Loja de Eletrônicos:** gera `dados_vendas_6000_registros.json`
-* **Academia:** gera `dados_academia_6000_registros.json`
-
----
-
-## 📊 Estrutura dos Dados
-
-| Chave       | Loja (Vendas)                                     | Academia (Geral)    |
-| ----------- | ------------------------------------------------- | ------------------- |
-| nome/loja   | "Loja de Eletrônicos XYZ"                         | "Superação Fitness" |
-| endereco    | Endereço fictício                                 | Endereço fictício   |
-| bairro      | Bairro fictício                                   | Bairro fictício     |
-| cidade      | Cidade fictícia                                   | Cidade fictícia     |
-| produto     | Smartphone, Notebook, Tablet, Smart TV, Headphone | N/A                 |
-| valor       | Número entre 100 e 5000                           | N/A                 |
-| id_registro | 1 a 6000                                          | 1 a 6000            |
+* **Electronics store:** generates `dados_vendas_6000_registros.json`
+* **Gym:** generates `dados_academia_6000_registros.json`
 
 ---
 
-## 📁 Exemplo de Saída JSON
+## Data Structure
+
+| Key          | Store (Sales)                                     | Gym (General)           |
+| ------------ | ------------------------------------------------- | ----------------------- |
+| name/store   | "Loja de Eletrônicos XYZ"                         | "Superação Fitness"     |
+| address      | Fictitious address                                | Fictitious address      |
+| neighborhood | Fictitious neighborhood                           | Fictitious neighborhood |
+| city         | Fictitious city                                   | Fictitious city         |
+| product      | Smartphone, Notebook, Tablet, Smart TV, Headphone | N/A                     |
+| value        | Number between 100 and 5000                       | N/A                     |
+| record_id    | 1 to 6000                                         | 1 to 6000               |
+
+---
+
+## Example Output (JSON)
 
 ```json
 [
   {
-    "nome": "Superação Fitness",
-    "endereco": "Rua das Flores, 123",
-    "bairro": "Centro",
-    "cidade": "São Paulo",
-    "id_registro": 1
+    "name": "Superação Fitness",
+    "address": "Rua das Flores, 123",
+    "neighborhood": "Centro",
+    "city": "São Paulo",
+    "record_id": 1
   }
 ]
 ```
 
 ---
 
-## 🔧 Personalização
+## Customization
 
-Você pode modificar o script para alterar:
+You may modify the script to change:
 
-* **Quantidade de registros**: altere `NUM_REGISTROS`
-* **Nome da loja/academia**: altere `NOME_LOJA` / `NOME_ACADEMIA`
-* **Lista de produtos**: altere `ITENS_VENDAS`
-* **Faixa de valores**: altere `fake.random_int(min=100, max=5000)`
-* **Seed**: altere `Faker.seed(42)`
-* **Idioma**: altere `fake = Faker('pt_BR')`
-
----
-
-## 📄 Licença
-
-Projeto open-source. Use e modifique como desejar.
+* Number of records: change `NUM_REGISTROS`
+* Store/gym name: change `NOME_LOJA` / `NOME_ACADEMIA`
+* Product list: change `ITENS_VENDAS`
+* Value range: change `fake.random_int(min=100, max=5000)`
+* Seed: change `Faker.seed(42)`
+* Locale: change `fake = Faker('pt_BR')`
 
 ---
 
-## ✍️ Autor
+## License
+
+Open-source project. Feel free to use and modify as needed.
+
+---
+
+## Author
 
 **DMaia-afk**
